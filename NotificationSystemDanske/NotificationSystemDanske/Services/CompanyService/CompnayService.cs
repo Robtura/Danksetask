@@ -5,19 +5,19 @@ namespace NotificationSystemDanske.Services.CompanyService
 {
     public class CompnayService : ICompanyService
     {
-        private static List<Company> Company = new List<Company>
-        {
-            new Company
-            {
-                Id = 1,
-                Name = "Danske",
-            },
-            new Company
-            {
-                Id = 2,
-                Name = "Swedbank",
-            }
-        };
+        //private static list<company> company = new list<company>
+        //{
+        //    new company
+        //    {
+        //        id = 1,
+        //        name = "danske",
+        //    },
+        //    new company
+        //    {
+        //        id = 2,
+        //        name = "swedbank",
+        //    }
+        //};
 
         private readonly DataContext _context;
     

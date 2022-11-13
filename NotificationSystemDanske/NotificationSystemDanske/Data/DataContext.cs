@@ -19,6 +19,6 @@ namespace Danske.Data
         }
 
         public DbSet<Company> Company { get; set; }
-        public DbSet<Company> Results { get; set; }
+        public DbSet<NotificationSystemDanske.Models.Results> Results { get; set; }
     }
 }
