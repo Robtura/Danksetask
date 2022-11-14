@@ -6,19 +6,6 @@ namespace NotificationSystemDanske.Services.CompanyService
 {
     public class CompnayService : ICompanyService
     {
-        //private static list<company> company = new list<company>
-        //{
-        //    new company
-        //    {
-        //        id = 1,
-        //        name = "danske",
-        //    },
-        //    new company
-        //    {
-        //        id = 2,
-        //        name = "swedbank",
-        //    }
-        //};
 
         private readonly DataContext _context;
     
@@ -32,6 +19,11 @@ namespace NotificationSystemDanske.Services.CompanyService
         {
             var company = await _context.Company.ToListAsync();
             return company;
+        }
+
+        public async Task<bool> InsertNotifications(Company company)
+        {
+            return true;
         }
     }
 }

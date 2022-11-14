@@ -31,12 +31,12 @@ namespace Danske.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<List<NotificationSchedule>>> AddResults(NotificationSchedule results)
+        public async Task<IActionResult> InsertNotifications(Company company)
         {
-            _context.NotificationSchedule.Add(results);
-            await context.SaveChangesAsync();
-
-            return Ok(await context.NotificationSchedule.ToListAsync());
+            if (await _companyService.InsertNotifications(company))
+                return StatusCode(200);
+            else
+                return StatusCode(500);
         }
     }
 }
