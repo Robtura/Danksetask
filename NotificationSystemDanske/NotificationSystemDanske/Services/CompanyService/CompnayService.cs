@@ -1,5 +1,6 @@
 ﻿using Danske.Data;
 using Microsoft.EntityFrameworkCore;
+using NotificationSystemDanske.Entity;
 
 namespace NotificationSystemDanske.Services.CompanyService
 {

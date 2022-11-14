@@ -1,4 +1,6 @@
-﻿namespace NotificationSystemDanske.Services.CompanyService
+﻿using NotificationSystemDanske.Entity;
+
+namespace NotificationSystemDanske.Services.CompanyService
 {
     public interface ICompanyService
     {

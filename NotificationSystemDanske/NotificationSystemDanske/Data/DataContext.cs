@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Data.Common;
 using Microsoft.EntityFrameworkCore;
-using NotificationSystemDanske.Models;
+using NotificationSystemDanske.Entity;
 
 namespace Danske.Data
 {
@@ -19,6 +19,6 @@ namespace Danske.Data
         }
 
         public DbSet<Company> Company { get; set; }
-        public DbSet<NotificationSystemDanske.Models.Results> Results { get; set; }
+        public DbSet<NotificationSchedule> NotificationSchedule { get; set; }
     }
 }
