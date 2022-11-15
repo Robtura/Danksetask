@@ -24,10 +24,15 @@ namespace Danske.Controllers
             _companyService = companyService;
         }
 
-        [HttpGet]
-        public async Task<ActionResult<List<Company>>> GetAllCompany()
+        [HttpGet("{entity_id}")]
+        public async Task<ActionResult<NotificationSchedule>> GetEntityidNotification(string entity_Id)
         {
-            return await _companyService.GetAllCompany();
+            //return await _companyService.GetCompanyId();
+
+            var resultid = _companyService.GetCompanyNotification(entity_Id);
+            if (resultid is null)
+                return NotFound("No Company found.");
+            return Ok(resultid);
         }
 
         [HttpPost]

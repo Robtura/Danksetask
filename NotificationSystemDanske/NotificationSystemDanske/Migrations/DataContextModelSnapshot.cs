@@ -21,7 +21,7 @@ namespace NotificationSystemDanske.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("NotificationSystemDanske.Models.Company", b =>
+            modelBuilder.Entity("NotificationSystemDanske.Entity.Company", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -30,9 +30,11 @@ namespace NotificationSystemDanske.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Entity_Id")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Market")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -52,7 +54,7 @@ namespace NotificationSystemDanske.Migrations
                     b.ToTable("Company");
                 });
 
-            modelBuilder.Entity("NotificationSystemDanske.Models.Results", b =>
+            modelBuilder.Entity("NotificationSystemDanske.Models.NotificationSchedule", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -65,7 +67,7 @@ namespace NotificationSystemDanske.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Results");
+                    b.ToTable("NotificationSchedule");
                 });
 #pragma warning restore 612, 618
         }

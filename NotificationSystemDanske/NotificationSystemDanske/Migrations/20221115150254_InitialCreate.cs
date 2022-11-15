@@ -16,11 +16,11 @@ namespace NotificationSystemDanske.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    EntityId = table.Column<string>(name: "Entity_Id", type: "nvarchar(max)", nullable: true),
+                    EntityId = table.Column<string>(name: "Entity_Id", type: "nvarchar(max)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Number = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Market = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Market = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -28,7 +28,7 @@ namespace NotificationSystemDanske.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Results",
+                name: "NotificationSchedule",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -37,7 +37,7 @@ namespace NotificationSystemDanske.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Results", x => x.Id);
+                    table.PrimaryKey("PK_NotificationSchedule", x => x.Id);
                 });
         }
 
@@ -48,7 +48,7 @@ namespace NotificationSystemDanske.Migrations
                 name: "Company");
 
             migrationBuilder.DropTable(
-                name: "Results");
+                name: "NotificationSchedule");
         }
     }
 }
