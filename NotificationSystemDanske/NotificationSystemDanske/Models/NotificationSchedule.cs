@@ -5,13 +5,13 @@ namespace NotificationSystemDanske.Models
 {
     public class NotificationSchedule
     {
+        public int id { get; set; }
+
         public string? SendingDate { get; set; }
 
-        [Key]
-        [Column("Company_id")]
-        public int Company_id { get; set; }
+        public string Company_id { get; set; }
 
-        public NotificationSchedule(int company_id, string sendingDate)
+        public NotificationSchedule(string company_id, string sendingDate)
         {
             SendingDate = sendingDate;
             Company_id = company_id;

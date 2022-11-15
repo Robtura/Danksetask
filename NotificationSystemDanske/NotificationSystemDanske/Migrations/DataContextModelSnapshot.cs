@@ -56,17 +56,21 @@ namespace NotificationSystemDanske.Migrations
 
             modelBuilder.Entity("NotificationSystemDanske.Models.NotificationSchedule", b =>
                 {
-                    b.Property<int>("Company_id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasColumnName("Company_id");
+                        .HasColumnName("id");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Company_id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<string>("Company_id")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SendingDate")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Company_id");
+                    b.HasKey("id");
 
                     b.ToTable("NotificationSchedule");
                 });

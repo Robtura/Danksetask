@@ -24,7 +24,7 @@ namespace Danske.Controllers
             _companyService = companyService;
         }
 
-        [HttpGet("{entity_id}")]
+        [HttpGet("entity_id")]
         public async Task<ActionResult<List<NotificationSchedule>>> GetEntityidNotification(string entity_Id)
         {
             return await _companyService.GetCompanyNotification(entity_Id);
