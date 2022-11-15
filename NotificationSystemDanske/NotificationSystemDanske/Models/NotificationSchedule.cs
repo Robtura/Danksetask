@@ -1,14 +1,21 @@
-﻿namespace NotificationSystemDanske.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+
+namespace NotificationSystemDanske.Models
 {
     public class NotificationSchedule
     {
-        public int Id { get; set; }
         public string? SendingDate { get; set; }
-        /*public NotificationSchedule(int id, string sendingdate)
+
+        [Key]
+        [Column("Company_id")]
+        public int Company_id { get; set; }
+
+        public NotificationSchedule(int company_id, string sendingDate)
         {
-            Id = id;
-            SendingDate = sendingdate;
-        }*/
+            SendingDate = sendingDate;
+            Company_id = company_id;
+        }
     }
 
 }

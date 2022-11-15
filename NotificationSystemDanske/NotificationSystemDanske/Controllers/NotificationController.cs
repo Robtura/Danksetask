@@ -25,14 +25,14 @@ namespace Danske.Controllers
         }
 
         [HttpGet("{entity_id}")]
-        public async Task<ActionResult<NotificationSchedule>> GetEntityidNotification(string entity_Id)
+        public async Task<ActionResult<List<NotificationSchedule>>> GetEntityidNotification(string entity_Id)
         {
-            //return await _companyService.GetCompanyId();
+            return await _companyService.GetCompanyNotification(entity_Id);
 
-            var resultid = _companyService.GetCompanyNotification(entity_Id);
+            /*var resultid = _companyService.GetCompanyNotification(entity_Id);
             if (resultid is null)
                 return NotFound("No Company found.");
-            return Ok(resultid);
+            return Ok(resultid); */
         }
 
         [HttpPost]

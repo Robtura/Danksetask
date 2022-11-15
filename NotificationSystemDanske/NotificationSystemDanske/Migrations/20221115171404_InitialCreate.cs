@@ -31,13 +31,13 @@ namespace NotificationSystemDanske.Migrations
                 name: "NotificationSchedule",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    Companyid = table.Column<int>(name: "Company_id", type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     SendingDate = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_NotificationSchedule", x => x.Id);
+                    table.PrimaryKey("PK_NotificationSchedule", x => x.Companyid);
                 });
         }
 
