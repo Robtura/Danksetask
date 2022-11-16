@@ -67,7 +67,7 @@ public class CompnayService : ICompanyService
             _context.NotificationSchedule.Add(new NotificationSchedule(company.Id, current.AddDays(20)));
         }
 
-        if (company.Market.Equals("Sweden") && company.Type.Equals("small") && company.Type.Equals("medium"))
+        if (company.Market.Equals("Sweden") && company.Type.Equals("small") || company.Type.Equals("medium"))
         {
             /*_context.NotificationSchedule.Add(new NotificationSchedule(company.Entity_Id, current.AddDays(1).ToString("dd/MM/yyyy")));
             _context.NotificationSchedule.Add(new NotificationSchedule(company.Entity_Id, current.AddDays(7).ToString("dd/MM/yyyy")));
