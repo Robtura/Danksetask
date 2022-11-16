@@ -10,7 +10,6 @@ namespace NotificationSystemDanske.Services.CompanyService
 
         private readonly DataContext _context;
     
-
         public CompnayService(DataContext context)
         {
             _context = context;
@@ -24,6 +23,7 @@ namespace NotificationSystemDanske.Services.CompanyService
 
         public async Task<bool> InsertNotifications(Company company)
         {
+
             var schedule = await _context.NotificationSchedule.ToListAsync();
 
             DateTime current= DateTime.Now;
@@ -66,7 +66,12 @@ namespace NotificationSystemDanske.Services.CompanyService
             {
                 _context.SaveChanges();
             }
+
+            _context.Company.Add(new Company(company));
+
             _context.SaveChanges();
+
+            
             return true;
         }
     }

@@ -9,6 +9,7 @@ using NotificationSchedule = NotificationSystemDanske.Models.NotificationSchedul
 
 namespace Danske.Controllers
 {
+
     [Route("api/[controller]")]
     [ApiController]
 

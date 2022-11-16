@@ -1,4 +1,6 @@
 ﻿using Microsoft.VisualBasic;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace NotificationSystemDanske.Entity
 {
@@ -10,6 +12,11 @@ namespace NotificationSystemDanske.Entity
         public string Number { get; set; } = string.Empty;
         public string Type { get; set; } = string.Empty;
         public string Market { get; set; } = string.Empty;
-    }
 
+        public Company(Company company)
+        {
+ 
+        }
+
+    }
 }
