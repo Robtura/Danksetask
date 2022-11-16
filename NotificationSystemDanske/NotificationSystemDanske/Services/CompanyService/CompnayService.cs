@@ -67,7 +67,12 @@ namespace NotificationSystemDanske.Services.CompanyService
                 _context.SaveChanges();
             }
 
-            _context.Company.Add(new Company(company));
+            _context.Company.Add(company);
+
+            /*_context.Company.Add(new Company(company));*/
+
+            /*var companydata = new Company() { int Id = "id", Entity_Id = entity_id, Name, Number, Type, Market };
+            _context.Company.Add(companydata);*/
 
             _context.SaveChanges();
 
