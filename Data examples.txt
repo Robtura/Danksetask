@@ -1,0 +1,48 @@
+{
+  "id": "aad7a630-af1c-4952-9cb4-44b8b847853b",
+  "name": "Danske",
+  "number": "1234567815",
+  "type": "large",
+  "market": "Denmark"
+}
+
+{
+  "id": "aad7a630-af1c-4952-9cb4-44b8b847853a",
+  "name": "SEB",
+  "number": "1234567814",
+  "type": "small",
+  "market": "Norway"
+}
+
+{
+  "id": "aad7a630-af1c-4952-9cb4-44b8b847853c",
+  "name": "Swedbank",
+  "number": "1234567812",
+  "type": "medium",
+  "market": "Sweden"
+}
+
+{
+  "id": "aad7a630-af1c-4952-9cb4-44b8b847853d",
+  "name": "General Financing",
+  "number": "1234567813",
+  "type": "small",
+  "market": "Sweden"
+}
+
+{
+  "id": "aad7a630-af1c-4952-9cb4-44b8b847853e",
+  "name": "General Financing",
+  "number": "1234567813",
+  "type": "large",
+  "market": "Finland"
+}
+
+
+{
+  "id": "aad7a630-af1c-4952-9cb4-44b8b847853f",
+  "name": "General Inc",
+  "number": "1234567813",
+  "type": "corporate",
+  "market": "Finland"
+}
