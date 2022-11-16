@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -14,9 +15,7 @@ namespace NotificationSystemDanske.Migrations
                 name: "Company",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    EntityId = table.Column<string>(name: "Entity_Id", type: "nvarchar(max)", nullable: false),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Number = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -33,8 +32,8 @@ namespace NotificationSystemDanske.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    SendingDate = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Companyid = table.Column<string>(name: "Company_id", type: "nvarchar(max)", nullable: false)
+                    SendingDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Companyid = table.Column<Guid>(name: "Company_id", type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {

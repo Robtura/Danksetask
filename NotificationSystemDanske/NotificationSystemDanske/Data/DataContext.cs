@@ -19,6 +19,6 @@ namespace Danske.Data
         }
 
         public DbSet<Company> Company { get; set; }
-        public DbSet<NotificationSchedule> NotificationSchedule { get; set; }
+        public DbSet<NotificationSystemDanske.Entity.NotificationSchedule> NotificationSchedule { get; set; }
     }
 }

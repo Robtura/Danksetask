@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NotificationSystemDanske.Entity;
+using NotificationSystemDanske.Models;
 using NotificationSystemDanske.Services.CompanyService;
 using SQLitePCL;
-using NotificationSchedule = NotificationSystemDanske.Models.NotificationSchedule;
 
 namespace Danske.Controllers
 {
@@ -26,7 +26,7 @@ namespace Danske.Controllers
         }
 
         [HttpGet("entity_id")]
-        public async Task<ActionResult<List<NotificationSchedule>>> GetEntityidNotification(string entity_Id)
+        public async Task<ActionResult<List<NotificationSystemDanske.Models.NotificationSchedule>>> GetEntityidNotification(Guid entity_Id)
         {
             return await _companyService.GetCompanyNotification(entity_Id);
 

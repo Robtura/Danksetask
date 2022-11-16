@@ -3,7 +3,7 @@ using Danske.Data;
 using NotificationSystemDanske.Services.CompanyService;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore;
-
+using NotificationSystemDanske.Entity;
 
 var builder = WebApplication.CreateBuilder(args);
 

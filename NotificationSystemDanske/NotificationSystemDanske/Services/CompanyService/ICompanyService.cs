@@ -7,7 +7,7 @@ namespace NotificationSystemDanske.Services.CompanyService
     {
         //Task<List<NotificationSchedule>> GetCompanyNotification(NotificationSchedule id, string sendingdate); //We list all our methods to return.
 
-        Task<List<NotificationSchedule>> GetCompanyNotification(string entity_id);
+        Task<List<Models.NotificationSchedule>> GetCompanyNotification(Guid id);
 
         Task<bool> InsertNotifications(Company company); 
 

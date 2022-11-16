@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -6,8 +7,9 @@ namespace NotificationSystemDanske.Entity
 {
     public class Company
     {
-        public int Id { get; set; }
-        public string Entity_Id { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public Guid Id { get; set; }
+        /*public Guid Entity_Id { get; set; }*/
         public string Name { get; set; } 
         public string Number { get; set; } 
         public string Type { get; set; } 
